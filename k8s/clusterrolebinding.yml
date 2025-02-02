@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: port-forward-binding
+subjects:
+  - kind: User
+    name: admin # replace this with the user running the command, or use 'serviceaccount' if it's a service account
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin  # For full cluster access, or use a more limited role if needed
+  apiGroup: rbac.authorization.k8s.io
