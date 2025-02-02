@@ -3,4 +3,4 @@
 kind: Namespace
 apiVersion: v1
 metadata:
-  name: ownserver
+  name: web-app
